@@ -9,7 +9,7 @@ mongo.connect('mongodb://127.0.0.1', function(err, database){
 
     console.log('MongoDB connected...');
 
-    // Connect to Socket.io
+    // Connect to Socket.io first
     client.on('connection', function(socket){
         let db=database.db('mongochat');
         let chat = db.collection('chats');
